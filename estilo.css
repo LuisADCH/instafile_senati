@@ -6,11 +6,17 @@
   box-sizing: border-box;
 }
 body {
-  background: #f5f7fd;
+  background: linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.75)), url('img/3.jpeg') no-repeat center center fixed; 
+  background-size: cover; 
+  /*background-position: center center;
+  background-repeat: no-repeat;
+  height: 1800px;
+  background-attachment: fixed;*/
+  /*background: #f5f7fd;*/
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #020f3c;
+  color: #ffffff;
   text-align: center;
   display: flex;
   align-items: center;
@@ -19,6 +25,8 @@ body {
 }
 
 .content {
+  background:url('img/4.jpg') no-repeat center center fixed; 
+  background-size: cover; 
   text-align: center;
   background-color: rgb(255, 255, 255);
   padding: 20px;
@@ -34,7 +42,7 @@ h1 {
 }
 
 h3 span {
-  color: #0730c5;
+  color: #10c8e9;
 }
 .container {
   width: 100%;
@@ -88,7 +96,7 @@ h3 span {
 }
 
 form p{
-  color: #0730c5;
+  color: #ffffff;
 }
 
 .Btn{
@@ -116,7 +124,8 @@ form p{
   justify-content: center;
   flex-direction: column;
   padding: 5px 20px;
-  background-color: #f5f7fd;
+  background-color: #000000a7;
+  opacity: 0.5;
   max-height: 430px;
   overflow-y: auto;
   width: 435px;
@@ -157,4 +166,48 @@ button.btn_delete svg {
   border-radius: 6px;
   display: inline-block;
   padding: 0 12px;
+}
+@media only screen and (max-width: 1024px) {
+  .content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    width: 90%;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .drop-area,
+  .container2 {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .drop-area {
+    height: 200px; 
+  }
+
+  .container2 {
+    max-height: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .drop-area {
+    height: 150px;
+  }
 }
